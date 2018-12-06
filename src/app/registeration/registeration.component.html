@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Register Form</h1>
+  <form >
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input [(ngModel)]="register.name" type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <button type="submit" class="btn btn-success" (click)="onSubmit()">Submit</button>
+
+  </form>
+</div>
