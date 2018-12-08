@@ -1,7 +1,14 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type':  'application/json'
+  })
+};
 
 import { Observable, of } from 'rxjs';
+import { map, tap } from 'rxjs/operators';
 
 import { Hero } from './hero';
 import { HEROES } from './mock-heroes';
@@ -14,12 +21,19 @@ export class HeroService {
 
   constructor(private messageService: MessageService, private http: HttpClient) { }
 
-  backendUrl = 'http://6604587f.ngrok.io/api/login';
+  backendUrl = 'http://localhost:8080/landlord/login';
+  backendUrl2 = 'http://localhost:8080/landlord/allHostels';
 
   sendData(register){
     console.log(register);
-    return this.http.post<any>(this.backendUrl, register);
+    return this.http.post<any>(this.backendUrl, register, httpOptions).
+        pipe(map(res => res));
    
+  }
+  getData(): Observable<any>{
+    console.log('service');
+    return this.http.get<any>(this.backendUrl2).
+        pipe(map(res => res));
   }
 
   getHeroes(): Observable<Hero[]> {

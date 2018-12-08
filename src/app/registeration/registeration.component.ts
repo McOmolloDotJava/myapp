@@ -17,7 +17,7 @@ export class RegisterationComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit() {
+  onSubmit(): void {
     console.log(this.register);
     this.heroService.sendData(this.register).subscribe(res => {
       console.log(res)

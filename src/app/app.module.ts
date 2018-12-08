@@ -9,7 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { RegisterationComponent } from './registeration/registeration.component'; // <-- NgModel lives here
+import { RegisterationComponent } from './registeration/registeration.component';
+import { UsersComponent } from './users/users.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RegisterationComponent } from './registeration/registeration.component'
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    RegisterationComponent
+    RegisterationComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
