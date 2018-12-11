@@ -8,7 +8,6 @@ const httpOptions = {
 };
 
 import { Observable, of } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
 
 import { Hero } from './hero';
 import { HEROES } from './mock-heroes';
@@ -26,14 +25,12 @@ export class HeroService {
 
   sendData(register){
     console.log(register);
-    return this.http.post<any>(this.backendUrl, register, httpOptions).
-        pipe(map(res => res));
+    return this.http.post<any>(this.backendUrl, register, httpOptions);
    
   }
   getData(): Observable<any>{
     console.log('service');
-    return this.http.get<any>(this.backendUrl2).
-        pipe(map(res => res));
+    return this.http.get<any>(this.backendUrl2);
   }
 
   getHeroes(): Observable<Hero[]> {

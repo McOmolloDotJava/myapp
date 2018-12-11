@@ -7,7 +7,7 @@ import { HeroService } from '../hero.service';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-usersToView: any =[];
+usersToView =[];
   constructor(private usersService: HeroService) { }
 
   ngOnInit() {
@@ -16,9 +16,11 @@ usersToView: any =[];
 
   recieveUsers(){
 this.usersService.getData().subscribe(myUsers =>{
-  console.log(myUsers);
 this.usersToView = myUsers
+console.log('userstoview',this.usersToView);
+console.log('users',myUsers);
 });
+
   }
 
 }
