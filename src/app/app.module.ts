@@ -10,7 +10,8 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterationComponent } from './registeration/registeration.component';
-import { UsersComponent } from './users/users.component'; // <-- NgModel lives here
+import { UsersComponent } from './users/users.component';
+import { LoginComponent } from './login/login.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UsersComponent } from './users/users.component'; // <-- NgModel lives h
     MessagesComponent,
     DashboardComponent,
     RegisterationComponent,
-    UsersComponent
+    UsersComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
