@@ -2,6 +2,7 @@
   <h1>LOGIN </h1>
   <form >
     <div class="form-group">
+        <div *ngIf="error" class="text-danger" >{{error}}</div> 
       <label for="email">EMAIL</label>
       <input [(ngModel)]="login.email" type="text" class="form-control" id="email" name="email" required>
     </div>
