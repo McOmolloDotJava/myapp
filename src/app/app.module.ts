@@ -11,7 +11,8 @@ import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterationComponent } from './registeration/registeration.component';
 import { UsersComponent } from './users/users.component';
-import { LoginComponent } from './login/login.component'; // <-- NgModel lives here
+import { LoginComponent } from './login/login.component';
+import { MytemplateComponent } from './mytemplate/mytemplate.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LoginComponent } from './login/login.component'; // <-- NgModel lives h
     DashboardComponent,
     RegisterationComponent,
     UsersComponent,
-    LoginComponent
+    LoginComponent,
+    MytemplateComponent
   ],
   imports: [
     BrowserModule,
